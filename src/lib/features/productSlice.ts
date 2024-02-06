@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { Product } from '@/types/product'
+import { RootState } from '@/lib/store'
 
 interface ProductState {
     entities: Array<Product>,
@@ -40,6 +41,6 @@ export const { productAdd, productDelete, productFindByID, productUpdate } = pro
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.product.value)`
-export const selectProduct = (state) => state.product.value
+// export const selectProduct = (state: RootState) => state.product.value
 
 export default productSlice.reducer

@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
+import productReducer from '@/lib/features/productSlice'
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {}
+    reducer: {
+      product: productReducer,
+    }
   })
 }
 
